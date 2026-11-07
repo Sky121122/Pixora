@@ -1,0 +1,427 @@
+
+.hero {
+  width: 100%;
+  padding: 75px 6% 95px;
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* Left Content */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 13px;
+  margin-bottom: 27px;
+
+  background: #FFFFFF;
+  border: 1.5px solid var(--dark);
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-tag svg {
+  color: #C58B17;
+}
+
+.hero-content h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -3.5px;
+  color: var(--dark);
+}
+
+.hero-content h1 span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.hero-content h1 span::after {
+  content: '';
+  position: absolute;
+
+  left: 0;
+  bottom: 3px;
+
+  width: 100%;
+  height: 13px;
+
+  background: var(--yellow);
+  z-index: -1;
+}
+
+.hero-description {
+  max-width: 480px;
+  margin-top: 25px;
+
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 32px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 19px;
+
+  border: 2px solid var(--dark);
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: all 0.2s ease;
+}
+
+.hero-primary-btn {
+  background: var(--dark);
+  color: #FFFFFF;
+}
+
+.hero-primary-btn:hover {
+  background: var(--yellow);
+  color: var(--dark);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--dark);
+}
+
+.hero-secondary-btn {
+  background: transparent;
+  color: var(--dark);
+}
+
+.hero-secondary-btn:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Small Note */
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 27px;
+
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hero-note-dot {
+  width: 8px;
+  height: 8px;
+  background: #62A87C;
+  border-radius: 50%;
+}
+
+/* Right Showcase */
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 510px;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.mascot-showcase {
+  position: relative;
+  z-index: 2;
+
+  background: #FFFFFF;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--dark);
+
+  overflow: hidden;
+}
+
+/* Showcase Header */
+
+.showcase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 19px;
+
+  border-bottom: 2px solid var(--dark);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.showcase-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #398456;
+}
+
+.showcase-status span {
+  width: 7px;
+  height: 7px;
+  background: #398456;
+  border-radius: 50%;
+}
+
+/* Mascot Display */
+
+.mascot-display {
+  position: relative;
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #F4C95D;
+  overflow: hidden;
+}
+
+.mascot-character {
+  position: relative;
+  z-index: 2;
+
+  font-size: 145px;
+  line-height: 1;
+
+  filter: drop-shadow(5px 7px 0 rgba(0, 0, 0, 0.12));
+
+  animation: mascot-float 3s ease-in-out infinite;
+}
+
+@keyframes mascot-float {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+/* Decorative Shapes */
+
+.mascot-sparkle {
+  position: absolute;
+  font-size: 35px;
+  color: var(--dark);
+}
+
+.sparkle-one {
+  top: 65px;
+  left: 18%;
+}
+
+.sparkle-two {
+  right: 18%;
+  bottom: 65px;
+  font-size: 45px;
+}
+
+.mascot-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  background: #FFFFFF;
+  border: 1.5px solid var(--dark);
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Showcase Footer */
+
+.showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 16px 19px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+/* Floating Labels */
+
+.floating-label {
+  position: absolute;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 15px;
+
+  background: #FFFFFF;
+  border: 2px solid var(--dark);
+  border-radius: 6px;
+  box-shadow: 3px 3px 0 var(--dark);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.floating-label span {
+  font-size: 17px;
+}
+
+.floating-label-top {
+  top: 0;
+  right: -2px;
+  transform: rotate(4deg);
+}
+
+.floating-label-bottom {
+  bottom: 4px;
+  left: -5px;
+  transform: rotate(-4deg);
+}
+
+/* Background Decorations */
+
+.hero-decoration {
+  position: absolute;
+  z-index: 0;
+  border: 2px solid var(--dark);
+}
+
+.hero-decoration-one {
+  width: 85px;
+  height: 85px;
+  top: 0;
+  left: 0;
+  background: var(--green);
+  transform: rotate(-12deg);
+}
+
+.hero-decoration-two {
+  width: 65px;
+  height: 65px;
+  right: 0;
+  bottom: 0;
+  background: var(--coral);
+  transform: rotate(12deg);
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .hero-container {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .mascot-display {
+    min-height: 270px;
+  }
+
+  .mascot-character {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 55px 5% 75px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 9vw, 58px);
+  }
+
+  .hero-visual {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 39px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .mascot-display {
+    min-height: 250px;
+  }
+
+  .showcase-footer {
+    font-size: 8px;
+  }
+}

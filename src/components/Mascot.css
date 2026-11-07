@@ -1,0 +1,10 @@
+
+.pixora-mascot {
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-color: transparent;
+  image-rendering: auto;
+  cursor: pointer;
+  transition: none !important;
+}

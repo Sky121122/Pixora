@@ -1,0 +1,39 @@
+{
+  "name": "pixora-mascot",
+  "version": "1.0.0",
+  "description": "Interactive sprite-based mascots for React applications",
+  "main": "dist/pixora-mascot.umd.cjs",
+  "module": "dist/pixora-mascot.js",
+  "style": "dist/pixora-mascot.css",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/pixora-mascot.js",
+      "require": "./dist/pixora-mascot.umd.cjs"
+    },
+    "./style.css": "./dist/pixora-mascot.css"
+  },
+ "files": [
+  "dist",
+  "README.md",
+  "LICENSE"
+],
+  "publishConfig": {
+  "access": "public",
+  "registry": "https://registry.npmjs.org/"
+},
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^7.0.0"
+  }
+  
+}

@@ -1,0 +1,19 @@
+.mascot-sprite {
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-color: transparent;
+  image-rendering: auto;
+  transition: none;
+}
+
+.mascot-sprite-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  font-size: 100px;
+}

@@ -1,0 +1,230 @@
+.sprite-playground {
+  width: 100%;
+  padding: 80px 6% 100px;
+  background: #EAE6DC;
+  border-top: 2px solid var(--dark);
+}
+
+.playground-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.playground-heading {
+  margin-bottom: 35px;
+}
+
+.playground-heading h2 {
+  margin-top: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: -2px;
+}
+
+.playground-heading h2 span {
+  color: #C18B24;
+}
+
+.playground-heading p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Preview */
+
+.playground-preview {
+  overflow: hidden;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 9px;
+  box-shadow: var(--shadow);
+  margin-bottom: 28px;
+}
+
+.playground-preview-header {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: var(--border);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+.playground-preview-header button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  background: var(--yellow);
+  border: 1.5px solid var(--dark);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.playground-character {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.playground-status {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 13px 18px;
+  border-top: var(--border);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Frame Selectors */
+
+.frame-selector {
+  padding: 23px;
+  margin-top: 22px;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: 8px;
+}
+
+.frame-selector-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.frame-selector-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.frame-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow);
+  border: 1.5px solid var(--dark);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.frame-selector-heading h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+.frame-selector-heading > span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.frame-description {
+  margin: 12px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Frame Grid */
+
+.frame-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.frame-option {
+  min-height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  background: var(--bg);
+  border: 1.5px solid #D0CBC1;
+  border-radius: 5px;
+
+  transition: all 0.2s ease;
+}
+
+.frame-option > span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.frame-option small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.frame-option:hover {
+  border-color: var(--dark);
+  transform: translateY(-2px);
+}
+
+.frame-option.active {
+  background: var(--yellow);
+  border: 2px solid var(--dark);
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+/* Responsive */
+
+@media (max-width: 750px) {
+  .frame-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .sprite-playground {
+    padding: 60px 5% 75px;
+  }
+
+  .frame-selector {
+    padding: 16px;
+  }
+
+  .playground-status {
+    flex-direction: column;
+  }
+}
+
+.playground-character {
+  cursor: crosshair;
+  touch-action: pan-y;
+}
+.playground-character {
+  cursor: pointer;
+  touch-action: pan-y;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playground-character:active {
+  cursor: grabbing;
+}
+
+.mascot-sprite {
+  transition: opacity 0.15s ease;
+}
