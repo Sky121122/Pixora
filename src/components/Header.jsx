@@ -24,7 +24,7 @@ function Header() {
           <a href="/#about"  onClick={closeMenu}>About</a>
           <Link to="/docs" onClick={closeMenu}>Documentation</Link>
           <a
-            href="https://github.com"
+            href="https://github.com/Sky121122/pixora-mascot"
             target="_blank"
             rel="noreferrer"
           >
